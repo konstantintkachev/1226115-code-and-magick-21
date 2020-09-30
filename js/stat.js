@@ -63,5 +63,11 @@ window.renderStatistics = function(ctx, players, times) {
       BAR_WIDTH,
       (BAR_HEIGHT * times[i]) / (-maxTime)
     );
+    ctx.fillText(
+      Math.round(times[i]),
+      CLOUD_X + TEXT_WIDTH + (TEXT_WIDTH + TEXT_WIDTH) * i, 
+      (BAR_HEIGHT * times[i]) / (-maxTime) - 20,
+      BAR_WIDTH
+    );
   }
 };
