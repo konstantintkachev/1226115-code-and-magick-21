@@ -59,14 +59,14 @@ window.renderStatistics = function(ctx, players, times) {
     ctx.fillStyle = colorColumns[i];
     ctx.fillRect(
       CLOUD_X + TEXT_WIDTH + (TEXT_WIDTH + TEXT_WIDTH) * i, 
-      CLOUD_HEIGHT - BAR_WIDTH,
+      CLOUD_HEIGHT - GAP - FONT_GAP - GAP - (BAR_HEIGHT * times[i] / maxTime),
       BAR_WIDTH,
-      (BAR_HEIGHT * times[i]) / (-maxTime)
+      BAR_HEIGHT * times[i] / maxTime
     );
     ctx.fillText(
       Math.round(times[i]),
       CLOUD_X + TEXT_WIDTH + (TEXT_WIDTH + TEXT_WIDTH) * i, 
-      (BAR_HEIGHT * times[i]) / (-maxTime) - 20,
+      CLOUD_HEIGHT - GAP - FONT_GAP - GAP - (BAR_HEIGHT * times[i] / maxTime) - GAP * 2,
       BAR_WIDTH
     );
   }
