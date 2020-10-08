@@ -49,4 +49,3 @@ function getWizardsTemlate (array) {
 } 
 getWizardsTemlate(wizardArray);
 similarListElement.appendChild(fragment);
-debugger
